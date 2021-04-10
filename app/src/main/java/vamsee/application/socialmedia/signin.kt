@@ -22,7 +22,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import vamsee.application.socialmedia.daos.UserDao
-import vamsee.application.socialmedia.users.User
+import vamsee.application.socialmedia.models.User
 
 class signin : AppCompatActivity() {
     private val TAG = "SignInActivity Tag"

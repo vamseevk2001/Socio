@@ -1,4 +1,4 @@
-package vamsee.application.socialmedia.users
+package vamsee.application.socialmedia.models
 
 data class User (
     val uid : String = "",
