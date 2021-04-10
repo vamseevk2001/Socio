@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1083300872962",
+    "project_id": "socio-59715",
+    "storage_bucket": "socio-59715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083300872962:android:865263e17cca16b8f0781b",
+        "android_client_info": {
+          "package_name": "vamsee.application.socialmedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083300872962-h52h6cmcuc1ajiquf21nqrj1v2ledtqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vamsee.application.socialmedia",
+            "certificate_hash": "d3dfc9349a9966702bacb84b01d393ba969db083"
+          }
+        },
+        {
+          "client_id": "1083300872962-8d5mrb424p56c9e7eus4p0g5v3ribe4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwzPy28nvnmPLDVWeFX9IeiwMyeXtH1g0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083300872962-8d5mrb424p56c9e7eus4p0g5v3ribe4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
