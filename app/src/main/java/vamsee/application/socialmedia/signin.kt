@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -33,6 +34,11 @@ class signin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.hide()
+        }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -84,8 +90,9 @@ class signin : AppCompatActivity() {
         val credentials = GoogleAuthProvider.getCredential(idToken, null)
 
         signInButton.visibility = View.GONE
+        logo.visibility = View.GONE
         SHOW_PROGRESS.visibility = View.VISIBLE
-        GlobalScope.launch (Dispatchers.IO) {
+        GlobalScope.launch(Dispatchers.IO) {
             val auth = auth.signInWithCredential(credentials).await()
             val firebaseUser = auth.user
             kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.Main){
@@ -97,7 +104,9 @@ class signin : AppCompatActivity() {
     private fun updateUI(firebaseUser: FirebaseUser?) {
         if (firebaseUser != null){
 
-            val user = User(firebaseUser.uid, firebaseUser.photoUrl.toString(), firebaseUser.displayName)
+            val user = User(firebaseUser.uid,
+                firebaseUser.photoUrl.toString(),
+                firebaseUser.displayName)
             val userDao = UserDao()
             userDao.addUser(user)
             val mainActivityIntent = Intent(this, MainActivity::class.java)
