@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1083300872962-19gtbs047ia3o7psup9pffdkg2ef2pgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vamsee.application.socialmedia",
+            "certificate_hash": "43439f794deac7ce210a6695097f7681ede791d1"
+          }
+        },
+        {
           "client_id": "1083300872962-h52h6cmcuc1ajiquf21nqrj1v2ledtqf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
