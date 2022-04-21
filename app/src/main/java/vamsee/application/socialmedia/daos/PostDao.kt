@@ -18,13 +18,13 @@ class PostDao {
     val postCollection = db.collection("Posts")
     val auth = Firebase.auth
 
-    fun addPost(text: String){
+    fun addPost(text: String, postImg:String){
         val currentUserId = auth.currentUser!!.uid
         GlobalScope.launch(Dispatchers.IO) {
             val userDao = UserDao()
             val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
             val currentTime = System.currentTimeMillis()
-            val post = Post(text, user, currentTime)
+            val post = Post(text, user, currentTime, postImg)
             postCollection.document().set(post)
         }
     }

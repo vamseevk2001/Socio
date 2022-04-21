@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "1083300872962-6tl5kgg8hqfi3njsvhnaj27idd29l35k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vamsee.application.socialmedia",
+            "certificate_hash": "1180630436a689c83d3d451732a20fed516eceb7"
+          }
+        },
+        {
           "client_id": "1083300872962-h52h6cmcuc1ajiquf21nqrj1v2ledtqf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
